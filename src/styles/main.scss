@@ -1,4 +1,6 @@
-@import 'styles.scss';
+@use '../styles/styles.scss';
+
+
 
 
 $bgColor: rgb(0, 0, 0);
@@ -58,7 +60,7 @@ body {
 }
 
 .home {
-    display: flex;
+    display: block;
 
     p {
         color: #FFF;
@@ -215,4 +217,202 @@ body {
 footer {
     color: #FFF;
     padding: 0px 0px 50px 80px;
+}
+
+@media screen and (max-width:styles.$mobile) {
+    .container {
+        max-width: 80%;
+        display: block;
+    }
+
+    .container__header {
+        display: block;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .midia {
+        display: block;
+
+        h3 {
+            color: #FFF;
+        }
+
+        p {
+            text-align: center;
+            color: #FFF;
+        }
+
+        &__livros {
+            h3 {
+                text-align: center;
+            }
+
+            ul {
+                list-style: none;
+                padding: 0;
+
+                li {
+                    margin-bottom: 20px;
+
+                    .midia__all {
+                        display: flex;
+                        align-items: center;
+
+                        img {
+                            margin-right: 20px;
+                            width: 144px;
+                            height: 219px;
+                        }
+
+
+                    }
+                }
+            }
+        }
+
+        &__jogos {
+            ul {
+                list-style: none;
+
+                li {
+                    margin-bottom: 20px;
+
+                    .midia__all {
+                        align-items: center;
+                    }
+
+                    img {
+                        margin-right: 20px;
+                        width: 344px;
+                        height: 219px;
+                    }
+                }
+
+
+            }
+        }
+
+        &__serie {
+            ul {
+                list-style: none;
+
+                li {
+                    margin-bottom: 20px;
+
+                    .midia__all {
+                        margin: 0 auto;
+                    }
+
+                    img {
+                        width: 344px;
+                        height: 519px;
+                    }
+                }
+
+
+            }
+        }
+    }
+
+    .container__header {
+        margin: 28px auto;
+        text-align: center;
+        width: 100%;
+        display: block;
+
+
+        img {
+            display: block;
+            width: 100%;
+
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+
+            a {
+                text-decoration: none;
+                color: #FFF;
+            }
+
+            li {
+                color: #FFF;
+                margin-right: 40px;
+            }
+        }
+
+
+    }
+
+    .container {
+
+        text-align: center;
+        max-width: 800px;
+
+        #lg {}
+
+        h2 {
+            color: #FFF;
+            font-size: 4em;
+        }
+    }
+
+    .home {
+        display: block;
+
+        p {
+            color: #FFF;
+            text-align: justify;
+            margin-top: 40px;
+            max-width: 800px;
+            font-size: 1.3em;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            line-height: 1.2;
+        }
+
+        &__right {
+
+
+            &__img {
+                width: 100%;
+                height: 550px;
+
+                border-radius: 4%;
+            }
+        }
+    }
+
+    .sobre {
+
+        &__personagem {
+            display: block;
+
+
+            &__all {
+                width: 100%;
+                height: 580px;
+
+                border-radius: 4%;
+
+
+            }
+        }
+
+        p {
+            color: #FFF;
+            text-align: justify;
+            max-width: 780px;
+            font-size: 1.5em;
+        }
+
+        h2 {
+            color: #FFF;
+            font-size: 4em;
+
+        }
+    }
 }
